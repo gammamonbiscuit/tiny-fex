@@ -27,8 +27,8 @@ RUN cd /FEX && \
 # steamcmd: lib32gcc-s1
 # https://developer.valvesoftware.com/wiki/SteamCMD#Manually
 RUN cd /rootfs && \
-    chroot . apt --allow-unauthenticated update && \
-    chroot . apt --allow-unauthenticated install -y lib32gcc-s1
+    chroot . apt update && \
+    chroot . apt install -y lib32gcc-s1
 
 # Clean up
 # https://wiki.fex-emu.com/index.php/Development:Setting_up_RootFS#File_deletion
